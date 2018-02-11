@@ -12,14 +12,7 @@ class App extends React.Component {
 
   constructor() {
   super();
-  /*var config = {
-    apiKey: "<API_KEY>",
-    authDomain: "<PROJECT_ID>.firebaseapp.com",
-    databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
-    storageBucket: "<BUCKET>.appspot.com",
-  };
-  firebase.initializeApp(config); */
-  //console.log(localStorage);
+  
   this.addVeggie = this.addVeggie.bind(this);
   this.get_nbr_veggie_in_order = this.get_nbr_veggie_in_order.bind(this);
   this.increment_nbr_veggie_in_order = this.increment_nbr_veggie_in_order.bind(this)
@@ -55,22 +48,22 @@ class App extends React.Component {
   // Chargement des veggies recuperés depuis le fichier sample-veggies.js
   loadSamples()
   {
-   /* const tmp_veggies = this.state.veggies;
+  const tmp_veggies = this.state.veggies;
   console.log("tmp_veggie");
   console.log(tmp_veggies);
-*/
-  /*sampleVeggies.map(key => tmp_veggies[`${key}`] = sampleVeggies[`${key}`] )
-  for( var obj in sampleVeggies)
+
+  for( var key in sampleVeggies)
   {
     tmp_veggies[`${key}`] = sampleVeggies[`${key}`]
-  }*/
+  }
   this.setState({
-    veggies: sampleVeggies
+    veggies: tmp_veggies
   });
   console.log("new state:")
   console.log(this.state)
 
   }
+
 
 
 
